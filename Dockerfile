@@ -39,11 +39,11 @@ RUN \
  RUN git clone https://github.com/chaincoin/chaincoin.git
  
 # Setup Scripts 
- RUN ./autogen.sh
- RUN ./configure --without-gui
+ RUN /usr/src/chaincoin/autogen.sh
+ RUN /usr/src/chaincoin/configure --without-gui
  
 # Running Make process
-RUN make
-RUN make install
+# RUN make
+# RUN make install
 
 
