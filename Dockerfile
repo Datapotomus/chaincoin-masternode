@@ -36,5 +36,9 @@ RUN \
 
 # Pulls software from github
  RUN git clone https://github.com/chaincoin/chaincoin.git
+ 
+# Running Make process
+RUN make
+RUN make install
 
 
