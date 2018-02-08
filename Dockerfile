@@ -4,8 +4,8 @@ FROM  ubuntu:14.04
 WORKDIR chain/src/
 
 # Exposing ports
-EXPOSE 8333
-EXPOSE 11994
+EXPOSE 8333 11994
+
 
 
 # install packages
