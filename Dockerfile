@@ -27,6 +27,7 @@ RUN \
  software-properties-common \
  python-software-properties \
  g++ \
+ vim \
  bsdmainutils
 
 # Download and compile Berkely DB, frankly don't know why this is seperate, but im following everyone else.
