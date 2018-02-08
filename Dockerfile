@@ -38,6 +38,10 @@ RUN \
 # Pulls software from github
  RUN git clone https://github.com/chaincoin/chaincoin.git
  
+# Setup Scripts 
+ RUN ./autogen.sh
+ RUN ./configure --without-gui
+ 
 # Running Make process
 RUN make
 RUN make install
