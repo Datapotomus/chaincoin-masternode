@@ -36,10 +36,4 @@ RUN \
  
 
 
-# Cleanup
-    apt-get -y autoremove && \
-    apt-get -y clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/* && \
-    rm -rf /var/tmp/*
 
