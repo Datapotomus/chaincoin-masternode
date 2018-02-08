@@ -1,51 +1,12 @@
-# datapotomus / minergate-cli
+# datapotomus / chaincoin-masternode
 
-I got tired of having to install in different places, and also though that if I wanted to give cloud mining a shot this was the fastest way.
+This is a more put together version of the chaincoin masternode, based on masternode documentation here: 
+
+
 
 ## Usage
-You can use this miner to start mining on the minergate pool.
+You can use this file as a starting place to set up your masternode. It includes already running the make commands which were frankly a little a annoying to have to run. 
 
-### Examples
-
-Will start the container detached, and start mining Fantomcoin and monero together on all cores
-```
-docker run -d minergate-cli -user {email} -fcn+xmr
-```
-
-Will start the container only using two cores mining Fantomcoin and Monero and 2 mining bytecoin
-```
-docker run -d minergate-cli -user {email} -bcn 2 -fcn+mxr 2
-```
-
-#### Currency Options
-- `bcn`  Bytecoin
-- `xmr`  Monero
-- `fcn`  Fantomcoin
-- `dsh`  Dashcoin
-- `qcn`  QuazarCoin
-- `xdn`  DigitalNote
-- `mcn`  MonetaVerde
-- `aeon` Aeon coin
-- `inf8` Infinium-8
-
-#### Dual Currency Options
-These are the coins you can mine together.
-
-Fantomcoin combinations
-- `fcn+bcn`
-- `fcn+xmr`
-- `fcn+qcn`
-- `fcn+xdn`
-- `fcn+aeon`
-- `fcn+dsh`
-
-MonetaVerde Combinations
-- `mcn+bcn`
-- `mcn+xmr`
-- `mcn+qcn`
-- `mcn+xdn`
-- `mcn+aeon`
-- `mcn+dsh`
 
 ##### Donations
 Never expected but always welcome:
@@ -64,5 +25,5 @@ Monero:
 Ethereum:
 
 ```
-0x41b0106309791B62314Df27F524e06B3881cBd01
+0x08aA6AC2f5877C74d45Fc26e961f0CBB56b2e843
 ```
