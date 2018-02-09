@@ -46,4 +46,7 @@ RUN \
 # RUN make
 # RUN make install
 
+# Copying starter configuration file
+COPY chaincoin.conf /root/.chaincoin/
+
 
