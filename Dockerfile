@@ -1,7 +1,7 @@
 FROM  ubuntu:14.04
 
 # global environment settings
-WORKDIR /usr/src
+
 
 # Exposing ports
 EXPOSE 8333 11994
@@ -38,15 +38,15 @@ RUN \
 # Pulls software from github
  RUN git clone https://github.com/chaincoin/chaincoin.git
  
+ WORKDIR /chaincoin/
+ 
 # Setup Scripts 
- RUN /usr/src/chaincoin/autogen.sh
- RUN /usr/src/chaincoin/configure --without-gui
+ RUN ./autogen.sh
+ RUN ./configure --without-gui
  
 # Running Make process
-RUN cd /usr/src/ && make
-RUN cd /usr/src/ && make install
+ RUN make
+ RUN make install
 
 # Copying starter configuration file
 COPY chaincoin.conf /root/.chaincoin/
-
-
