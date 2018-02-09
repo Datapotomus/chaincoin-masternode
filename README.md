@@ -20,7 +20,7 @@ Pull the file
 `sudo docker pull datapotomus/chaincoin-masternode`
 
 Start the container detached.
-`sudo docker run -p 8333:8333 -p 11994:11994 --name masternode -t datapotomus/chaincoin-masternode`
+`sudo docker run -d -p 8333:8333 -p 11994:11994 --name masternode -t datapotomus/chaincoin-masternode`
 
 ## Configure Masternode
 After you have started up the container you will need to go into it, and modify the configuration file as well as pulling your public, and private keys from the chaincoin deamon. 
