@@ -43,8 +43,8 @@ RUN \
  RUN /usr/src/chaincoin/configure --without-gui
  
 # Running Make process
- RUN make
- RUN make install
+RUN cd /usr/src/chaincoin/ && make
+RUN cd /usr/src/chaincoin/ && make install
 
 # Copying starter configuration file
 COPY chaincoin.conf /root/.chaincoin/
