@@ -17,9 +17,11 @@ Digital ocean has a 1GB droplet that should be able to run the container success
 You can use this file as a starting place to set up your masternode. It includes already running the make commands which were frankly a little a annoying to have to run. 
 
 Pull the file
+
 `sudo docker pull datapotomus/chaincoin-masternode`
 
 Start the container detached.
+
 `sudo docker run -d -p 8333:8333 -p 11994:11994 --name masternode -t datapotomus/chaincoin-masternode`
 
 ## Configure Masternode
@@ -29,7 +31,9 @@ After you have started up the container you will need to go into it, and modify 
 `sudo docker exec -it masternode bash`
 
 Modify the starter configuration file located in the following location. I included VIM in the dockerfile to be able to modify it.
+
 `/root/.chaincoin/chaincoin.conf`
+
 
 Change the two values in the file to values you want to use.
 ```
@@ -38,25 +42,34 @@ rpcpassword=CHANGETHISPASSWORD
 ```
 
 Save your file. Then start up the daemon.
+
 `chaincoind --daemon`
 
 Run the following command to obtain your public key:
+
 `chaincoind getaccountaddress 0`
+
 Run this command to obtain your master private key.
+
 `chaincoind masternode genkey`
 
 Do note that you you will need this key for the next step.
+
 Stop the deamon.
+
 `chaincoind stop`
 
 Modify the chaincoin.conf file, and add the following values. Making sure to replace the values in the <>.
+
 ```
 listen=1
 maternode=1
 masternodeprivkey=<keyobtained_by_running_genkey>
 masternodeaddr=<static_ip>:11994
 ```
+
 Start up the agent
+
 `chaincoind --daemon`
 
 
