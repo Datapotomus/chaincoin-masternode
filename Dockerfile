@@ -4,7 +4,7 @@ FROM  ubuntu:14.04
 
 
 # Exposing ports
-EXPOSE 8333 11994
+EXPOSE 8333 11994 11995
 
 
 
@@ -28,6 +28,7 @@ RUN \
  python-software-properties \
  g++ \
  vim \
+ nano \
  bsdmainutils
 
 # Download and compile Berkely DB, frankly don't know why this is seperate, but im following everyone else.
@@ -47,6 +48,7 @@ RUN \
 # Running Make process
  RUN make
  RUN make install
+ 
 
 # Copying starter configuration file
-COPY chaincoin.conf /root/.chaincoin/
+COPY chaincoin.conf /root/.chaincoin/chaincoin.conf
