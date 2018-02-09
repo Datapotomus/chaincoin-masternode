@@ -37,7 +37,7 @@ Modify the starter configuration file located in the following location. I inclu
 `/root/.chaincoin/chaincoin.conf`
 
 
-Change the two values in the file to values you want to use.
+Change the two values in the file to values you want to use. Please note that the daeamon probably won't start without you changing them. If you are running a server these should be private values you record for later.
 ```
 rpcuser=CHANGETHISUSER
 rpcpassword=CHANGETHISPASSWORD
@@ -47,15 +47,26 @@ Save your file. Then start up the daemon.
 
 `chaincoind --daemon`
 
+See if the daemon is running.
+
+`chaincoind getinfo`
+
+If it isn't please once again make sure you change your user and password.
+
+
 Run the following command to obtain your public key:
 
 `chaincoind getaccountaddress 0`
+
+Write this key down, and save it for later. You will use that as the address to send your coins.
 
 Run this command to obtain your master private key.
 
 `chaincoind masternode genkey`
 
-Do note that you you will need this key for the next step.
+
+Do note that you you will need this key for the next step. Please keep it in a safe place. If you lose access to your VM or the hardware you were running on. You can use this key to recover your account. If you don't have it, and you lose access to your hardware you are screwed.
+
 
 Stop the deamon.
 
