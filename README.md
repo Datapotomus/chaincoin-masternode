@@ -3,7 +3,10 @@
 
 This is a more put together version of the chaincoin masternode, based on masternode documentation here:
 
-[https://toaster.chaincoin.org/docs/Setting%20up%20a%20Chaincoin%20Masternode%20-%20draft%20v.04.pdf](https://toaster.chaincoin.org/docs/Setting%20up%20a%20Chaincoin%20Masternode%20-%20draft%20v.04.pdf)
+[https://steemit.com/masternode/@fredyendesigns/chaincoin-remote-controller-masternode-setup-guide](https://steemit.com/masternode/@fredyendesigns/chaincoin-remote-controller-masternode-setup-guide)
+
+You will need to follow parts of their guide in order to get your local wallet set up to manage your master nodes.
+
  
 The build was taking a ton of time on a one core server, so I took advantage of the docker hub to compile it there.
 
@@ -110,6 +113,7 @@ This command provides a list of transaction information.
 `chaincoind listtransactions`
 
 ### Start the masternode
+
 Go back into your GUI wallet, and start the masternode on the masternodes tab.
 
 
@@ -131,7 +135,9 @@ sudo ufw enable
 ##### Donations
 Never expected but always welcome:
 
+
 Following, and liking my stuff on steemit doesn't cost you anything. :)
+
 https://steemd.com/@datapotomus
 
 
