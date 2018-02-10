@@ -75,9 +75,13 @@ Still need to figure out if you can run multiple containers without port 8333 at
 ## Configure Masternode
 
 Modify the template configuration file.
-`docker exec -it masternode_localbuild vim /root/.chaincoin/chaincoin.conf`
+
+`docker exec -it masternode1 vim /root/.chaincoin/chaincoin.conf`
+
 or
-`docker exec -it masternode_localbuild nano /root/.chaincoin/chaincoin.conf`
+
+`docker exec -it masternode1 nano /root/.chaincoin/chaincoin.conf`
+
 
 I included both VIM and nano.  I am partial to VIM, but that's just me.
 
