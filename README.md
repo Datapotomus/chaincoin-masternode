@@ -13,6 +13,46 @@ Also built upon the information here. https://steemit.com/chaincoin/@mrewers/set
 You should be able to run this container on a rather small virtual machine that you can obtain by a hosting company. 
 Digital ocean has a 1GB droplet that should be able to run the container successfully.
 
+
+## Prereqs
+### Set the Firewall
+
+Run the following commands to allow communication through your ports.
+
+```
+sudo ufw allow OpenSSH
+sudo ufw allow 8333
+sudo ufw allow 11994
+sudo ufw allow 2376
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+```
+
+You should also be able to allow some additional chaincoin ports to allow additional masternodes to run on the same box if you are using mulitple docker containers to map to. Here are some extras if you need them.
+
+```
+sudo ufw allow 11996
+sudo ufw allow 11997
+sudo ufw allow 11998
+...
+```
+
+## Install Docker
+
+You will need to install docker if you haven't done so already.
+
+```
+sudo apt-get install apt-transport-https
+sudo apt-get install ca-certificates
+sudo apt-get install curl
+sudo apt-get install software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu/dists/trusty/stable/"
+```
+Then do a `docker ps` to check and see if docker is running.
+
+
 ## Usage
 You can use this file as a starting place to set up your masternode. It includes already running the make commands which were frankly a little a annoying to have to run. 
 
