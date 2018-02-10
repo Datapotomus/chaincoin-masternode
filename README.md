@@ -102,12 +102,12 @@ Once again will play with the bind to make sure it works. After you are done sav
 ### Start the daemon
 
 ```
-docker exec -it masternode_localbuild chaincoind --daemon
+docker exec -it masternode1 chaincoind --daemon
 ```
 
 Then check to make sure it actually started.
 ```
-docker exec -it masternode_localbuild chaincoind getinfo
+docker exec -it masternode1 chaincoind getinfo
 ```
 
 
