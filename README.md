@@ -62,7 +62,9 @@ Pull the file
 
 Start the container detached.
 
-`sudo docker run -d -p 8333:8333 -p 11994:11994 --name masternode -t datapotomus/chaincoin-masternode`
+`sudo docker run -d -p 8333:8333 -p 11994:11994 --name masternode1 -t datapotomus/chaincoin-masternode`
+
+Still need to figure out if you can run multiple containers without port 8333 attached to them.
 
 
 
