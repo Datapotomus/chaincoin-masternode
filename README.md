@@ -69,7 +69,40 @@ Still need to figure out if you can run multiple containers without port 8333 at
 
 
 ## Configure Masternode
-After you have started up the container you will need to go into it, and modify the configuration file as well as pulling your public, and private keys from the chaincoin deamon. 
+
+Modify the template configuration file.
+`docker exec -it masternode_localbuild vim /root/.chaincoin/chaincoin.conf`
+or
+`docker exec -it masternode_localbuild nano /root/.chaincoin/chaincoin.conf`
+
+I included both VIM and nano.  I am partial to VIM, but that's just me.
+
+Modify these parameters that are in the file with your values.
+
+```
+rpcuser=XXXXXXXXXXXX
+rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+externalip=[SERVER IP ADDRESS]
+bind=[SERVER IP ADDRESS]
+masternodeprivkey=[MASTERNODE GENKEY]
+masternodeaddr=[SERVER IP ADDRESS]:11994
+
+```
+Once again will play with the bind to make sure it works. After you are done save your file.
+
+### Start the daemon
+
+```
+docker exec -it masternode_localbuild chaincoind --daemon
+```
+
+Then check to make sure it actually started.
+```
+docker exec -it masternode_localbuild chaincoind getinfo
+```
+
+
 
 ### Enter your container
 `sudo docker exec -it masternode bash`
