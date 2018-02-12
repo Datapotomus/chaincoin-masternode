@@ -138,7 +138,7 @@ Never expected but always welcome:
 
 Following, and liking my stuff on steemit doesn't cost you anything. :)
 
-https://steemd.com/@datapotomus
+https://steemit.com/@datapotomus
 
 
 Chaincoin
