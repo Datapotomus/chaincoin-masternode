@@ -64,7 +64,7 @@ You can use this file as a starting place to set up your masternode. It includes
 Start the container detached.
 
 
-`sudo docker run -d -p 8333:8333 -p 11994:11994 --name masternode1 -t datapotomus/chaincoin-masternode`
+`sudo docker run -d -p <ip address>:8333:8333 -p <ip address>:11994:11994 --name masternode1 -t datapotomus/chaincoin-masternode`
 
 ## Configure Masternode
 
