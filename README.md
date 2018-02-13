@@ -47,6 +47,14 @@ apt-cache policy docker-ce
 sudo apt-get install -y docker-ce
 sudo systemctl status docker
 ```
+
+Or, if you are running a more recent OS version like Ubuntu 17.10.
+
+```
+sudo apt install docker.io
+```
+
+
 Then do a `docker ps` to check and see if docker is running.
 
 
